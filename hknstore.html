@@ -1,0 +1,2851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HKN STORE – Luxury Fashion</title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+        /* ============================================================
+                   HKN STORE – ULTRA PREMIUM LUXURY DESIGN
+                   ============================================================ */
+        :root {
+            --gold: #d4af37;
+            --gold-light: #e8d5a0;
+            --gold-dark: #b8960f;
+            --black: #0a0a0a;
+            --black-light: #1a1a1a;
+            --black-mid: #2a2a2a;
+            --white: #ffffff;
+            --white-off: #f5f5f0;
+            --gray-ultra: #1e1e1e;
+            --glass-bg: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 215, 0, 0.12);
+            --shadow-gold: 0 8px 40px rgba(212, 175, 55, 0.15);
+            --shadow-gold-lg: 0 16px 64px rgba(212, 175, 55, 0.25);
+            --shadow-black: 0 8px 40px rgba(0, 0, 0, 0.6);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* ============================================================
+                   PREMIUM SCROLLBAR
+                   ============================================================ */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--black);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-light);
+        }
+
+        /* ============================================================
+                   TYPOGRAPHY
+                   ============================================================ */
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gold-border {
+            border-color: var(--gold);
+        }
+
+        /* ============================================================
+                   GLASSMORPHISM
+                   ============================================================ */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--glass-border);
+        }
+
+        .glass-dark {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 215, 0, 0.06);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 215, 0, 0.08);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow-gold);
+            transform: translateY(-6px);
+        }
+
+        /* ============================================================
+                   BUTTONS
+                   ============================================================ */
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--black);
+            padding: 16px 40px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            box-shadow: 0 4px 24px rgba(212, 175, 55, 0.25);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 48px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline-gold {
+            background: transparent;
+            color: var(--gold);
+            padding: 14px 36px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 2px solid var(--gold);
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-black {
+            background: var(--black);
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .btn-black:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* ============================================================
+                   PRODUCT CARD – LUXURY
+                   ============================================================ */
+        .product-card-luxury {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .product-card-luxury:hover {
+            transform: translateY(-12px);
+            border-color: rgba(212, 175, 55, 0.2);
+            box-shadow: var(--shadow-gold-lg);
+        }
+
+        .product-card-luxury .image-wrap {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: var(--black-light);
+        }
+
+        .product-card-luxury .image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card-luxury:hover .image-wrap img {
+            transform: scale(1.06);
+        }
+
+        .product-card-luxury .badge-luxury {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            padding: 4px 16px;
+            border-radius: 40px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            z-index: 2;
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .product-card-luxury .badge-luxury.sale {
+            background: #e85d3a;
+            color: white;
+        }
+
+        .product-card-luxury .badge-luxury.new {
+            background: var(--gold-dark);
+            color: white;
+        }
+
+        .product-card-luxury .quick-actions {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            opacity: 0;
+            transform: translateX(12px);
+            transition: var(--transition);
+            z-index: 2;
+        }
+
+        .product-card-luxury:hover .quick-actions {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .quick-actions button {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            color: var(--white);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .quick-actions button:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: scale(1.1);
+            border-color: var(--gold);
+        }
+
+        .product-card-luxury .info {
+            padding: 20px 20px 24px;
+        }
+
+        .product-card-luxury .info .brand {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .product-card-luxury .info .name {
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-top: 4px;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-card-luxury .info .price-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .product-card-luxury .info .price-wrap .current {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .product-card-luxury .info .price-wrap .original {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.3);
+            text-decoration: line-through;
+        }
+
+        .product-card-luxury .info .stars {
+            display: flex;
+            gap: 2px;
+            margin-top: 6px;
+        }
+
+        .product-card-luxury .info .stars i {
+            color: var(--gold);
+            font-size: 0.7rem;
+        }
+
+        .product-card-luxury .info .stars i.empty {
+            color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ============================================================
+                   CATEGORY CARD – LUXURY
+                   ============================================================ */
+        .category-card-luxury {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 16px;
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            overflow: hidden;
+            min-height: 160px;
+        }
+
+        .category-card-luxury::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+            opacity: 0;
+            transition: var(--transition);
+            border-radius: var(--radius);
+        }
+
+        .category-card-luxury:hover::before {
+            opacity: 1;
+        }
+
+        .category-card-luxury:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .category-card-luxury .icon {
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin-bottom: 12px;
+            transition: var(--transition);
+        }
+
+        .category-card-luxury:hover .icon {
+            transform: scale(1.1);
+        }
+
+        .category-card-luxury .cat-name {
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.04em;
+        }
+
+        .category-card-luxury .cat-count {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 4px;
+        }
+
+        /* ============================================================
+                   NAVBAR – LUXURY
+                   ============================================================ */
+        .navbar-luxury {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0 40px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.06);
+            transition: var(--transition);
+        }
+
+        .navbar-luxury .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .navbar-luxury .logo span {
+            color: var(--gold);
+        }
+
+        .navbar-luxury .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .navbar-luxury .nav-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .navbar-luxury .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+
+        .navbar-luxury .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .navbar-luxury .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .navbar-luxury .actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navbar-luxury .actions button,
+        .navbar-luxury .actions a {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            position: relative;
+        }
+
+        .navbar-luxury .actions button:hover,
+        .navbar-luxury .actions a:hover {
+            color: var(--gold);
+        }
+
+        .navbar-luxury .actions .badge-count {
+            position: absolute;
+            top: -6px;
+            right: -8px;
+            background: var(--gold);
+            color: var(--black);
+            font-size: 0.55rem;
+            font-weight: 700;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar-luxury .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 1024px) {
+            .navbar-luxury .nav-links {
+                display: none;
+            }
+            .navbar-luxury .mobile-toggle {
+                display: block;
+            }
+            .navbar-luxury {
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .navbar-luxury .actions .hide-mobile {
+                display: none;
+            }
+            .navbar-luxury {
+                height: 64px;
+                padding: 0 16px;
+            }
+            .navbar-luxury .logo {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* ============================================================
+                   MOBILE MENU
+                   ============================================================ */
+        .mobile-menu-luxury {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 10, 10, 0.96);
+            backdrop-filter: blur(40px);
+            z-index: 2000;
+            transform: translateX(-100%);
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            padding: 32px 24px;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-luxury.open {
+            transform: translateX(0);
+        }
+
+        .mobile-menu-luxury .close-btn {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.6rem;
+            cursor: pointer;
+            float: right;
+        }
+
+        .mobile-menu-luxury .menu-items {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .mobile-menu-luxury .menu-items a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .mobile-menu-luxury .menu-items a:hover {
+            color: var(--gold);
+        }
+
+        /* ============================================================
+                   CINEMATIC HERO
+                   ============================================================ */
+        .hero-cinematic {
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: var(--black);
+        }
+
+        .hero-cinematic .bg-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.35;
+        }
+
+        .hero-cinematic .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.2) 50%, rgba(10, 10, 10, 0.6) 100%);
+        }
+
+        .hero-cinematic .content {
+            position: relative;
+            z-index: 2;
+            padding: 40px;
+            max-width: 720px;
+        }
+
+        .hero-cinematic .content .subtitle {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .hero-cinematic .content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero-cinematic .content h1 .gold-text {
+            color: var(--gold);
+        }
+
+        .hero-cinematic .content p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 440px;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .hero-cinematic .content .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .hero-cinematic .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            animation: bounceDown 2s ease-in-out infinite;
+        }
+
+        .hero-cinematic .scroll-indicator i {
+            font-size: 1.2rem;
+        }
+
+        @keyframes bounceDown {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(8px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-cinematic .content h1 {
+                font-size: 2.8rem;
+            }
+            .hero-cinematic .content p {
+                font-size: 0.95rem;
+            }
+            .hero-cinematic .content .actions {
+                flex-direction: column;
+            }
+            .hero-cinematic .content .actions .btn-gold,
+            .hero-cinematic .content .actions .btn-outline-gold {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-cinematic .content h1 {
+                font-size: 2.2rem;
+            }
+            .hero-cinematic .content {
+                padding: 20px;
+            }
+        }
+
+        /* ============================================================
+                   SECTION TITLES
+                   ============================================================ */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .section-title .gold {
+            color: var(--gold);
+        }
+
+        .section-subtitle {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+        }
+
+        @media (max-width: 640px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* ============================================================
+                   TOAST NOTIFICATIONS
+                   ============================================================ */
+        .toast-container {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .toast {
+            padding: 16px 24px;
+            border-radius: var(--radius-sm);
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            min-width: 280px;
+            animation: slideInRight 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.85rem;
+            color: var(--white);
+            box-shadow: var(--shadow-black);
+        }
+
+        .toast .icon {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* ============================================================
+                   CART SIDEBAR
+                   ============================================================ */
+        .cart-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            z-index: 2999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .cart-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 440px;
+            max-width: 92vw;
+            background: var(--black-light);
+            z-index: 3000;
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            border-left: 1px solid rgba(212, 175, 55, 0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-sidebar.open {
+            transform: translateX(0);
+        }
+
+        .cart-sidebar .header {
+            padding: 20px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-sidebar .header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+        }
+
+        .cart-sidebar .header button {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .cart-sidebar .header button:hover {
+            color: var(--gold);
+        }
+
+        .cart-sidebar .items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px 24px;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item img {
+            width: 72px;
+            height: 96px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+        }
+
+        .cart-item .details {
+            flex: 1;
+        }
+
+        .cart-item .details .name {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .cart-item .details .price {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+
+        .cart-item .details .qty-control {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .cart-item .details .qty-control button {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: var(--white);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+
+        .cart-item .details .qty-control button:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .cart-item .details .qty-control span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .cart-item .remove-btn {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.15);
+            cursor: pointer;
+            transition: var(--transition);
+            align-self: flex-start;
+            padding: 4px;
+        }
+
+        .cart-item .remove-btn:hover {
+            color: #e85d3a;
+        }
+
+        .cart-sidebar .footer {
+            padding: 20px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .cart-sidebar .footer .total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .cart-sidebar .footer .total .amount {
+            color: var(--gold);
+        }
+
+        .cart-sidebar .footer .btn-gold {
+            width: 100%;
+            justify-content: center;
+            padding: 14px;
+        }
+
+        /* ============================================================
+                   ADMIN PANEL
+                   ============================================================ */
+        .admin-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(12px);
+            z-index: 3999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .admin-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .admin-panel {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 560px;
+            max-width: 94vw;
+            background: var(--black-light);
+            z-index: 4000;
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            border-left: 1px solid rgba(212, 175, 55, 0.08);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .admin-panel.open {
+            transform: translateX(0);
+        }
+
+        .admin-panel .admin-body {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .admin-panel .admin-sidebar {
+            width: 180px;
+            background: rgba(10, 10, 10, 0.6);
+            padding: 20px 12px;
+            overflow-y: auto;
+            border-right: 1px solid rgba(255, 255, 255, 0.04);
+            flex-shrink: 0;
+        }
+
+        .admin-panel .admin-sidebar .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.08);
+            margin-bottom: 16px;
+        }
+
+        .admin-panel .admin-sidebar .logo span {
+            color: var(--gold);
+        }
+
+        .admin-panel .admin-sidebar .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 2px;
+        }
+
+        .admin-panel .admin-sidebar .nav-item:hover {
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--white);
+        }
+
+        .admin-panel .admin-sidebar .nav-item.active {
+            background: rgba(212, 175, 55, 0.12);
+            color: var(--gold);
+        }
+
+        .admin-panel .admin-sidebar .nav-item i {
+            width: 18px;
+            font-size: 0.9rem;
+        }
+
+        .admin-panel .admin-content {
+            flex: 1;
+            padding: 24px;
+            overflow-y: auto;
+        }
+
+        .admin-panel .admin-content .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .admin-panel .admin-content .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            text-align: center;
+        }
+
+        .admin-panel .admin-content .stat-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .admin-panel .admin-content .stat-card p {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 4px;
+        }
+
+        .admin-panel .admin-content .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+        }
+
+        .admin-panel .admin-content .admin-table th {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-size: 0.65rem;
+        }
+
+        .admin-panel .admin-content .admin-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .admin-panel .admin-content .admin-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .admin-panel .admin-content .admin-form .form-group {
+            margin-bottom: 14px;
+        }
+
+        .admin-panel .admin-content .admin-form label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 4px;
+        }
+
+        .admin-panel .admin-content .admin-form input,
+        .admin-panel .admin-content .admin-form select,
+        .admin-panel .admin-content .admin-form textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--white);
+            font-size: 0.85rem;
+            transition: var(--transition);
+            outline: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .admin-panel .admin-content .admin-form input:focus,
+        .admin-panel .admin-content .admin-form select:focus,
+        .admin-panel .admin-content .admin-form textarea:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .admin-panel .admin-content .admin-form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .admin-toggle-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 5000;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--gold);
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-black);
+        }
+
+        .admin-toggle-btn:hover {
+            transform: scale(1.08);
+            border-color: var(--gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* ============================================================
+                   LIVE CHAT
+                   ============================================================ */
+        .chat-toggle-btn {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 5000;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--gold);
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-black);
+        }
+
+        .chat-toggle-btn:hover {
+            transform: scale(1.08);
+            border-color: var(--gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .chat-window {
+            position: fixed;
+            bottom: 88px;
+            left: 24px;
+            width: 380px;
+            max-width: 90vw;
+            max-height: 480px;
+            background: var(--black-light);
+            border-radius: var(--radius);
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            box-shadow: var(--shadow-black);
+            z-index: 5001;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-window.open {
+            display: flex;
+        }
+
+        .chat-window .header {
+            padding: 14px 20px;
+            background: rgba(212, 175, 55, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-window .header span {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .chat-window .header span i {
+            color: var(--gold);
+            margin-right: 8px;
+        }
+
+        .chat-window .header button {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .chat-window .header button:hover {
+            color: var(--gold);
+        }
+
+        .chat-window .messages {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            min-height: 180px;
+            max-height: 320px;
+        }
+
+        .chat-window .messages .msg {
+            margin-bottom: 10px;
+            padding: 10px 16px;
+            border-radius: var(--radius-sm);
+            max-width: 85%;
+            font-size: 0.85rem;
+        }
+
+        .chat-window .messages .msg.sent {
+            background: var(--gold);
+            color: var(--black);
+            margin-left: auto;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-window .messages .msg.received {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--white);
+            border-bottom-left-radius: 4px;
+        }
+
+        .chat-window .input-wrap {
+            padding: 12px 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-window .input-wrap input {
+            flex: 1;
+            padding: 8px 16px;
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--white);
+            font-size: 0.85rem;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .chat-window .input-wrap input:focus {
+            border-color: var(--gold);
+        }
+
+        .chat-window .input-wrap button {
+            background: var(--gold);
+            border: none;
+            color: var(--black);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .chat-window .input-wrap button:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 640px) {
+            .chat-window {
+                left: 12px;
+                right: 12px;
+                width: auto;
+                bottom: 76px;
+            }
+            .chat-toggle-btn,
+            .admin-toggle-btn {
+                width: 44px;
+                height: 44px;
+                font-size: 1rem;
+                bottom: 16px;
+            }
+            .chat-toggle-btn {
+                left: 16px;
+            }
+            .admin-toggle-btn {
+                right: 16px;
+            }
+        }
+
+        /* ============================================================
+                   INSTAGRAM GALLERY
+                   ============================================================ */
+        .ig-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 4px;
+        }
+
+        .ig-grid .item {
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            border-radius: 4px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .ig-grid .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .ig-grid .item:hover img {
+            transform: scale(1.06);
+        }
+
+        .ig-grid .item .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 10, 10, 0.4);
+            backdrop-filter: blur(4px);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .ig-grid .item:hover .overlay {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .ig-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ============================================================
+                   FOOTER – LUXURY
+                   ============================================================ */
+        .footer-luxury {
+            background: var(--black);
+            border-top: 1px solid rgba(255, 215, 0, 0.04);
+            padding: 60px 0 30px;
+        }
+
+        .footer-luxury .brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .footer-luxury .brand span {
+            color: var(--gold);
+        }
+
+        .footer-luxury .brand-desc {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.85rem;
+            max-width: 300px;
+            line-height: 1.7;
+            margin-top: 12px;
+        }
+
+        .footer-luxury .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .footer-luxury .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .footer-luxury .social-links a:hover {
+            background: var(--gold);
+            color: var(--black);
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .footer-luxury .links h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 16px;
+        }
+
+        .footer-luxury .links ul {
+            list-style: none;
+        }
+
+        .footer-luxury .links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-luxury .links ul a {
+            color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .footer-luxury .links ul a:hover {
+            color: var(--gold);
+        }
+
+        .footer-luxury .bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            padding-top: 24px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.15);
+        }
+
+        .footer-luxury .bottom a {
+            color: rgba(255, 255, 255, 0.15);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-luxury .bottom a:hover {
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            .footer-luxury .grid {
+                grid-template-columns: 1fr 1fr !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-luxury .grid {
+                grid-template-columns: 1fr !important;
+            }
+            .footer-luxury .bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ============================================================
+                   PREMIUM LOADING ANIMATION
+                   ============================================================ */
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: var(--black);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader .spinner {
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgba(212, 175, 55, 0.1);
+            border-top: 2px solid var(--gold);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        .loader .text {
+            margin-top: 24px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .loader .text span {
+            color: var(--gold);
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ============================================================
+                   RESPONSIVE UTILITIES
+                   ============================================================ */
+        .container-custom {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        @media (max-width: 1024px) {
+            .container-custom {
+                padding: 0 24px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container-custom {
+                padding: 0 16px;
+            }
+        }
+
+        /* ============================================================
+                   ANIMATIONS
+                   ============================================================ */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .fade-up-d1 {
+            animation-delay: 0.1s;
+        }
+        .fade-up-d2 {
+            animation-delay: 0.2s;
+        }
+        .fade-up-d3 {
+            animation-delay: 0.3s;
+        }
+        .fade-up-d4 {
+            animation-delay: 0.4s;
+        }
+
+        /* ============================================================
+                   MEGA MENU DROPDOWN
+                   ============================================================ */
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(10, 10, 10, 0.96);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(212, 175, 55, 0.06);
+            border-radius: var(--radius);
+            padding: 32px;
+            min-width: 600px;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            margin-top: 8px;
+        }
+
+        .nav-item:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            margin-top: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .mega-menu {
+                display: none;
+            }
+        }
+
+        /* Payment badges */
+        .payment-badge {
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 40px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+    PREMIUM LOADING SCREEN
+    ============================================================ -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <div class="text">HKN <span>STORE</span></div>
+    </div>
+
+    <!-- ============================================================
+    NAVBAR – LUXURY
+    ============================================================ -->
+    <nav class="navbar-luxury" id="navbar">
+        <a href="#" class="logo">HKN <span>STORE</span></a>
+
+        <ul class="nav-links">
+            <li class="nav-item">
+                <a href="#">Men</a>
+                <div class="mega-menu">
+                    <div class="grid grid-cols-3 gap-6">
+                        <div><h4 class="text-xs uppercase tracking-widest text-gold mb-3">Clothing</h4><ul class="space-y-2 text-sm text-white/40"><li><a href="#" class="hover:text-gold transition">Suits</a></li><li><a href="#" class="hover:text-gold transition">Shirts</a></li><li><a href="#" class="hover:text-gold transition">Trousers</a></li><li><a href="#" class="hover:text-gold transition">Jackets</a></li></ul></div>
+                        <div><h4 class="text-xs uppercase tracking-widest text-gold mb-3">Footwear</h4><ul class="space-y-2 text-sm text-white/40"><li><a href="#" class="hover:text-gold transition">Sneakers</a></li><li><a href="#" class="hover:text-gold transition">Loafers</a></li><li><a href="#" class="hover:text-gold transition">Boots</a></li><li><a href="#" class="hover:text-gold transition">Formal</a></li></ul></div>
+                        <div><h4 class="text-xs uppercase tracking-widest text-gold mb-3">Accessories</h4><ul class="space-y-2 text-sm text-white/40"><li><a href="#" class="hover:text-gold transition">Watches</a></li><li><a href="#" class="hover:text-gold transition">Bags</a></li><li><a href="#" class="hover:text-gold transition">Belts</a></li><li><a href="#" class="hover:text-gold transition">Wallets</a></li></ul></div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#">Women</a>
+                <div class="mega-menu">
+                    <div class="grid grid-cols-3 gap-6">
+                        <div><h4 class="text-xs uppercase tracking-widest text-gold mb-3">Clothing</h4><ul class="space-y-2 text-sm text-white/40"><li><a href="#" class="hover:text-gold transition">Dresses</a></li><li><a href="#" class="hover:text-gold transition">Tops</a></li><li><a href="#" class="hover:text-gold transition">Skirts</a></li><li><a href="#" class="hover:text-gold transition">Jackets</a></li></ul></div>
+                        <div><h4 class="text-xs uppercase tracking-widest text-gold mb-3">Footwear</h4><ul class="space-y-2 text-sm text-white/40"><li><a href="#" class="hover:text-gold transition">Heels</a></li><li><a href="#" class="hover:text-gold transition">Flats</a></li><li><a href="#" class="hover:text-gold transition">Boots</a></li><li><a href="#" class="hover:text-gold transition">Sneakers</a></li></ul></div>
+                        <div><h4 class="text-xs uppercase tracking-widest text-gold mb-3">Accessories</h4><ul class="space-y-2 text-sm text-white/40"><li><a href="#" class="hover:text-gold transition">Jewelry</a></li><li><a href="#" class="hover:text-gold transition">Bags</a></li><li><a href="#" class="hover:text-gold transition">Scarves</a></li><li><a href="#" class="hover:text-gold transition">Belts</a></li></ul></div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Sale</a></li>
+        </ul>
+
+        <div class="actions">
+            <button id="searchToggle" title="Search"><i class="fas fa-search"></i></button>
+            <a href="#" class="hide-mobile" title="Wishlist"><i class="fas fa-heart"></i><span class="badge-count">3</span></a>
+            <button id="cartToggle" title="Cart"><i class="fas fa-shopping-bag"></i><span class="badge-count" id="cartCount">0</span></button>
+            <a href="#" class="hide-mobile btn-outline-gold text-xs py-2 px-5" style="font-size:0.65rem;padding:8px 20px;">Sign In</a>
+            <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+    MOBILE MENU
+    ============================================================ -->
+    <div class="mobile-menu-luxury" id="mobileMenu">
+        <button class="close-btn" id="mobileClose"><i class="fas fa-times"></i></button>
+        <div class="menu-items">
+            <a href="#">Home</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Sale</a>
+            <a href="#">Wishlist</a>
+            <a href="#">Cart</a>
+            <a href="#" style="border-bottom:none;padding-top:16px;color:var(--gold);">Sign In</a>
+            <a href="#" style="border-bottom:none;color:var(--gold);">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    SEARCH BAR (expandable)
+    ============================================================ -->
+    <div id="searchBar" style="display:none;position:fixed;top:80px;left:0;right:0;z-index:999;padding:20px 40px;background:rgba(10,10,10,0.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(212,175,55,0.06);">
+        <div class="container-custom">
+            <div class="relative">
+                <input type="text" placeholder="Search for luxury fashion..." class="w-full px-6 py-4 rounded-full bg-black/60 border border-gold/20 text-white placeholder-white/30 focus:outline-none focus:border-gold/50 transition" />
+                <button class="absolute right-4 top-1/2 -translate-y-1/2 text-gold"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    CART SIDEBAR
+    ============================================================ -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="header">
+            <h3>Shopping Bag</h3>
+            <button id="cartClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="items" id="cartItems">
+            <div class="text-center py-12 text-white/20 text-sm">Your bag is empty</div>
+        </div>
+        <div class="footer">
+            <div class="total">
+                <span>Subtotal</span>
+                <span class="amount" id="cartTotal">PKR 0</span>
+            </div>
+            <button class="btn-gold">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    ADMIN PANEL
+    ============================================================ -->
+    <div class="admin-overlay" id="adminOverlay"></div>
+    <div class="admin-panel" id="adminPanel">
+        <div style="padding:16px 24px;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;justify-content:space-between;align-items:center;flex-shrink:0;">
+            <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;">HKN <span style="color:var(--gold);">ADMIN</span></span>
+            <button id="adminClose" style="background:none;border:none;color:rgba(255,255,255,0.3);cursor:pointer;font-size:1.2rem;"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="admin-body">
+            <div class="admin-sidebar">
+                <div class="logo">HKN <span>STORE</span></div>
+                <div class="nav-item active" data-tab="dashboard"><i class="fas fa-chart-pie"></i> Dashboard</div>
+                <div class="nav-item" data-tab="products"><i class="fas fa-box"></i> Products</div>
+                <div class="nav-item" data-tab="categories"><i class="fas fa-tags"></i> Categories</div>
+                <div class="nav-item" data-tab="orders"><i class="fas fa-shopping-cart"></i> Orders</div>
+                <div class="nav-item" data-tab="customers"><i class="fas fa-users"></i> Customers</div>
+                <div class="nav-item" data-tab="coupons"><i class="fas fa-ticket-alt"></i> Coupons</div>
+                <div class="nav-item" data-tab="settings"><i class="fas fa-cog"></i> Settings</div>
+            </div>
+            <div class="admin-content">
+                <!-- Dashboard -->
+                <div id="tab-dashboard">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:16px;">Dashboard</h3>
+                    <div class="stat-grid">
+                        <div class="stat-card"><h3>12,847</h3><p>Sales</p></div>
+                        <div class="stat-card"><h3>PKR 2.4M</h3><p>Revenue</p></div>
+                        <div class="stat-card"><h3>1,284</h3><p>Products</p></div>
+                        <div class="stat-card"><h3>3,456</h3><p>Customers</p></div>
+                    </div>
+                    <h4 style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.3);margin-bottom:12px;">Recent Orders</h4>
+                    <table class="admin-table">
+                        <thead><tr><th>Order</th><th>Customer</th><th>Amount</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td>#ORD-001</td><td>Ahmed Khan</td><td>PKR 4,299</td><td><span style="color:var(--gold);">Pending</span></td></tr>
+                            <tr><td>#ORD-002</td><td>Sana Tariq</td><td>PKR 6,499</td><td><span style="color:#4ECDC4;">Delivered</span></td></tr>
+                            <tr><td>#ORD-003</td><td>Usman Ali</td><td>PKR 3,299</td><td><span style="color:#FFD93D;">Processing</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Products -->
+                <div id="tab-products" style="display:none;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;">Products</h3>
+                        <button class="btn-gold text-xs py-1.5 px-4" onclick="showAddProduct()">+ Add</button>
+                    </div>
+                    <div id="productList">
+                        <table class="admin-table">
+                            <thead><tr><th>Product</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead>
+                            <tbody id="productTableBody">
+                                <tr><td>Luxury Leather Jacket</td><td>PKR 12,999</td><td>15</td><td><button class="text-gold text-xs mr-2"><i class="fas fa-edit"></i></button><button class="text-red-500 text-xs"><i class="fas fa-trash"></i></button></td></tr>
+                                <tr><td>Premium Silk Dress</td><td>PKR 8,499</td><td>23</td><td><button class="text-gold text-xs mr-2"><i class="fas fa-edit"></i></button><button class="text-red-500 text-xs"><i class="fas fa-trash"></i></button></td></tr>
+                                <tr><td>Designer Sneakers</td><td>PKR 6,999</td><td>32</td><td><button class="text-gold text-xs mr-2"><i class="fas fa-edit"></i></button><button class="text-red-500 text-xs"><i class="fas fa-trash"></i></button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="addProductForm" style="display:none;margin-top:20px;border-top:1px solid rgba(255,255,255,0.04);padding-top:20px;">
+                        <h4 style="font-size:0.85rem;font-weight:600;margin-bottom:12px;">Add New Product</h4>
+                        <div class="admin-form grid grid-cols-2 gap-3">
+                            <div class="form-group col-span-2"><label>Product Name</label><input type="text" placeholder="Name" id="prodName" /></div>
+                            <div class="form-group"><label>Price (PKR)</label><input type="number" placeholder="0" id="prodPrice" /></div>
+                            <div class="form-group"><label>Stock</label><input type="number" placeholder="0" id="prodStock" /></div>
+                            <div class="form-group col-span-2"><label>Category</label><select id="prodCategory"><option>Men</option><option>Women</option><option>Kids</option></select></div>
+                            <div class="form-group col-span-2"><label>Image URL</label><input type="text" placeholder="https://..." id="prodImage" /></div>
+                            <div class="form-group col-span-2"><button class="btn-gold text-sm py-2 w-full" onclick="addProduct()">Add Product</button></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Categories -->
+                <div id="tab-categories" style="display:none;">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:16px;">Categories</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-4 py-1.5 rounded-full bg-white/5 text-xs">Men</span>
+                        <span class="px-4 py-1.5 rounded-full bg-white/5 text-xs">Women</span>
+                        <span class="px-4 py-1.5 rounded-full bg-white/5 text-xs">Kids</span>
+                        <span class="px-4 py-1.5 rounded-full bg-white/5 text-xs">Accessories</span>
+                        <span class="px-4 py-1.5 rounded-full bg-white/5 text-xs">Footwear</span>
+                    </div>
+                    <div class="admin-form flex gap-3">
+                        <input type="text" placeholder="New category" class="flex-1 text-sm" id="newCategory" />
+                        <button class="btn-gold text-sm py-2 px-4" onclick="addCategory()">Add</button>
+                    </div>
+                </div>
+                <!-- Orders -->
+                <div id="tab-orders" style="display:none;">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:16px;">Orders</h3>
+                    <table class="admin-table">
+                        <thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td>#ORD-001</td><td>Ahmed Khan</td><td>2</td><td>PKR 4,299</td><td><span style="color:var(--gold);">Pending</span></td></tr>
+                            <tr><td>#ORD-002</td><td>Sana Tariq</td><td>1</td><td>PKR 6,499</td><td><span style="color:#4ECDC4;">Delivered</span></td></tr>
+                            <tr><td>#ORD-003</td><td>Usman Ali</td><td>3</td><td>PKR 3,299</td><td><span style="color:#FFD93D;">Processing</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Customers -->
+                <div id="tab-customers" style="display:none;">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:16px;">Customers</h3>
+                    <table class="admin-table">
+                        <thead><tr><th>Name</th><th>Email</th><th>Orders</th><th>Joined</th></tr></thead>
+                        <tbody>
+                            <tr><td>Ahmed Khan</td><td>ahmed@email.com</td><td>15</td><td>Jan 2026</td></tr>
+                            <tr><td>Sana Tariq</td><td>sana@email.com</td><td>9</td><td>Feb 2026</td></tr>
+                            <tr><td>Usman Ali</td><td>usman@email.com</td><td>6</td><td>Mar 2026</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Coupons -->
+                <div id="tab-coupons" style="display:none;">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:16px;">Coupons</h3>
+                    <div class="admin-form flex gap-3 mb-4">
+                        <input type="text" placeholder="Code" class="flex-1 text-sm" id="couponCode" />
+                        <input type="number" placeholder="%" class="w-20 text-sm" id="couponPercent" />
+                        <button class="btn-gold text-sm py-2 px-4" onclick="addCoupon()">Add</button>
+                    </div>
+                    <table class="admin-table">
+                        <thead><tr><th>Code</th><th>Discount</th><th>Uses</th></tr></thead>
+                        <tbody>
+                            <tr><td>LUXE20</td><td>20%</td><td>120</td></tr>
+                            <tr><td>GOLD15</td><td>15%</td><td>89</td></tr>
+                            <tr><td>VIP10</td><td>10%</td><td>234</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Settings -->
+                <div id="tab-settings" style="display:none;">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:16px;">Settings</h3>
+                    <div class="admin-form space-y-3">
+                        <div class="form-group"><label>Store Name</label><input type="text" value="HKN STORE" /></div>
+                        <div class="form-group"><label>Currency</label><select><option>PKR - Pakistani Rupee</option></select></div>
+                        <div class="form-group"><label>Email</label><input type="email" value="info@hknstore.pk" /></div>
+                        <div class="form-group"><label>Phone</label><input type="text" value="+92 300 1234567" /></div>
+                        <button class="btn-gold text-sm py-2 w-full">Save Settings</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    ADMIN TOGGLE
+    ============================================================ -->
+    <button class="admin-toggle-btn" id="adminToggle" title="Admin Panel">
+        <i class="fas fa-user-shield"></i>
+    </button>
+
+    <!-- ============================================================
+    LIVE CHAT
+    ============================================================ -->
+    <button class="chat-toggle-btn" id="chatToggle">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="header">
+            <span><i class="fas fa-gem"></i> Concierge</span>
+            <button id="chatClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="messages" id="chatMessages">
+            <div class="msg received">Welcome to HKN STORE. How may we assist you today?</div>
+            <div class="msg received">Explore our luxury collection or ask about sizing.</div>
+        </div>
+        <div class="input-wrap">
+            <input type="text" placeholder="Type a message..." id="chatInput" />
+            <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    TOAST CONTAINER
+    ============================================================ -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ============================================================
+    CINEMATIC HERO
+    ============================================================ -->
+    <section class="hero-cinematic" id="hero">
+        <div class="overlay"></div>
+        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1600&h=900&fit=crop&q=80" alt="Luxury Fashion" class="bg-video" style="object-position:center 30%;" />
+        <div class="content">
+            <div class="subtitle fade-up">Spring/Summer 2026 Collection</div>
+            <h1 class="fade-up fade-up-d1">Elevate Your <br/><span class="gold-text">Style</span></h1>
+            <p class="fade-up fade-up-d2">Discover the epitome of luxury fashion. Crafted for those who appreciate the finer things in life.</p>
+            <div class="actions fade-up fade-up-d3">
+                <a href="#" class="btn-gold">Explore Collection <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="btn-outline-gold">Shop Now</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CATEGORIES – LUXURY
+    ============================================================ -->
+    <section class="py-20">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <p class="section-subtitle">Categories</p>
+                <h2 class="section-title">Shop by <span class="gold">Collection</span></h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+                <a href="#" class="category-card-luxury">
+                    <div class="icon"><i class="fas fa-user-tie"></i></div>
+                    <span class="cat-name">Men</span>
+                    <span class="cat-count">1,284 items</span>
+                </a>
+                <a href="#" class="category-card-luxury">
+                    <div class="icon"><i class="fas fa-female"></i></div>
+                    <span class="cat-name">Women</span>
+                    <span class="cat-count">1,956 items</span>
+                </a>
+                <a href="#" class="category-card-luxury">
+                    <div class="icon"><i class="fas fa-child"></i></div>
+                    <span class="cat-name">Kids</span>
+                    <span class="cat-count">876 items</span>
+                </a>
+                <a href="#" class="category-card-luxury">
+                    <div class="icon"><i class="fas fa-shoe-prints"></i></div>
+                    <span class="cat-name">Footwear</span>
+                    <span class="cat-count">543 items</span>
+                </a>
+                <a href="#" class="category-card-luxury">
+                    <div class="icon"><i class="fas fa-gem"></i></div>
+                    <span class="cat-name">Accessories</span>
+                    <span class="cat-count">432 items</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    NEW ARRIVALS
+    ============================================================ -->
+    <section class="py-20 bg-black-light/30">
+        <div class="container-custom">
+            <div class="flex items-center justify-between mb-12">
+                <div>
+                    <p class="section-subtitle">Latest Drops</p>
+                    <h2 class="section-title">New <span class="gold">Arrivals</span></h2>
+                </div>
+                <a href="#" class="text-gold text-sm hover:underline">View All <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+            <div class="product-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Product 1 -->
+                <div class="product-card-luxury">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=400&h=533&fit=crop" alt="Product" />
+                        <span class="badge-luxury new">New</span>
+                        <div class="quick-actions">
+                            <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                            <button class="add-to-cart-quick"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="brand">HKN Collection</div>
+                        <div class="name">Premium Silk Blazer</div>
+                        <div class="price-wrap">
+                            <span class="current">PKR 12,499</span>
+                            <span class="original">PKR 15,999</span>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card-luxury">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=400&h=533&fit=crop" alt="Product" />
+                        <span class="badge-luxury new">New</span>
+                        <div class="quick-actions">
+                            <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                            <button class="add-to-cart-quick"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="brand">HKN Collection</div>
+                        <div class="name">Embroidered Lawn Suit</div>
+                        <div class="price-wrap">
+                            <span class="current">PKR 8,499</span>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card-luxury">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=533&fit=crop" alt="Product" />
+                        <span class="badge-luxury sale">Sale</span>
+                        <div class="quick-actions">
+                            <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                            <button class="add-to-cart-quick"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="brand">HKN Collection</div>
+                        <div class="name">Luxury Silk Embroidered Suit</div>
+                        <div class="price-wrap">
+                            <span class="current">PKR 9,999</span>
+                            <span class="original">PKR 14,999</span>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card-luxury">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1583744946564-b52d01e7f922?w=400&h=533&fit=crop" alt="Product" />
+                        <span class="badge-luxury new">New</span>
+                        <div class="quick-actions">
+                            <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                            <button class="add-to-cart-quick"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="brand">HKN Collection</div>
+                        <div class="name">Summer Lawn Collection</div>
+                        <div class="price-wrap">
+                            <span class="current">PKR 6,499</span>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    BEST SELLERS
+    ============================================================ -->
+    <section class="py-20">
+        <div class="container-custom">
+            <div class="flex items-center justify-between mb-12">
+                <div>
+                    <p class="section-subtitle">Top Rated</p>
+                    <h2 class="section-title">Best <span class="gold">Sellers</span></h2>
+                </div>
+                <a href="#" class="text-gold text-sm hover:underline">View All <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+            <div class="product-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <div class="product-card-luxury">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=533&fit=crop" alt="Product" />
+                        <span class="badge-luxury" style="background:var(--gold);color:var(--black);">Top</span>
+                        <div class="quick-actions">
+                            <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                            <button class="add-to-cart-quick"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="brand">HKN Collection</div>
+                        <div class="name">Premium Leather Sneakers</div>
+                        <div class="price-wrap">
+                            <span class="current">PKR 5,999</span>
+                        </div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <div class="product-card-luxury">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=533&fit=crop" alt="Product" />
+                        <div class="quick-actions">
+                            <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                            <button class="add-to-cart-quick"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="brand">HKN Collection</div>
+                        <div class="name">Luxury Smart Watch</div>
+                        <div class="price-wrap">
+                            <span class="current">PKR 8,999</span>
+                        </div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    </div>
+                </div>
+                <div class="product-card-luxury">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=533&fit=crop" alt="Product" />
+                        <div class="quick-actions">
+                            <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                            <button class="add-to-cart-quick"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="brand">HKN Collection</div>
+                        <div class="name">Studio Headphones Pro</div>
+                        <div class="price-wrap">
+                            <span class="current">PKR 11,999</span>
+                        </div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    </div>
+                </div>
+                <div class="product-card-luxury">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&h=533&fit=crop" alt="Product" />
+                        <div class="quick-actions">
+                            <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                            <button class="add-to-cart-quick"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="brand">HKN Collection</div>
+                        <div class="name">Camera Tripod Pro</div>
+                        <div class="price-wrap">
+                            <span class="current">PKR 4,299</span>
+                        </div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FLASH SALE – LUXURY BANNER
+    ============================================================ -->
+    <section class="py-12">
+        <div class="container-custom">
+            <div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-black via-black-light to-gold/10 border border-gold/10 p-8 md:p-12">
+                <div class="flex flex-wrap items-center justify-between gap-6">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-gold font-semibold">Limited Time</span>
+                        <h2 class="text-3xl md:text-4xl font-playfair font-bold mt-2">Flash <span class="gold-text">Sale</span></h2>
+                        <p class="text-white/40 text-sm mt-1">Exclusive deals on premium collections</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="text-center bg-black/40 backdrop-blur rounded-xl px-6 py-3 border border-gold/10 min-w-[70px]">
+                            <span class="text-3xl font-bold gold-text" id="flashH">12</span>
+                            <p class="text-[10px] uppercase tracking-widest text-white/30">Hours</p>
+                        </div>
+                        <span class="text-2xl font-light text-gold/50">:</span>
+                        <div class="text-center bg-black/40 backdrop-blur rounded-xl px-6 py-3 border border-gold/10 min-w-[70px]">
+                            <span class="text-3xl font-bold gold-text" id="flashM">34</span>
+                            <p class="text-[10px] uppercase tracking-widest text-white/30">Mins</p>
+                        </div>
+                        <span class="text-2xl font-light text-gold/50">:</span>
+                        <div class="text-center bg-black/40 backdrop-blur rounded-xl px-6 py-3 border border-gold/10 min-w-[70px]">
+                            <span class="text-3xl font-bold gold-text" id="flashS">56</span>
+                            <p class="text-[10px] uppercase tracking-widest text-white/30">Secs</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-gold text-sm">Shop Sale</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PREMIUM BRAND SECTION
+    ============================================================ -->
+    <section class="py-16 border-t border-b border-white/5">
+        <div class="container-custom">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl gold-text mb-2"><i class="fas fa-crown"></i></div>
+                    <p class="text-sm font-semibold">Luxury Quality</p>
+                    <p class="text-xs text-white/20">Premium craftsmanship</p>
+                </div>
+                <div>
+                    <div class="text-4xl gold-text mb-2"><i class="fas fa-truck"></i></div>
+                    <p class="text-sm font-semibold">Free Delivery</p>
+                    <p class="text-xs text-white/20">On orders over PKR 5,000</p>
+                </div>
+                <div>
+                    <div class="text-4xl gold-text mb-2"><i class="fas fa-undo"></i></div>
+                    <p class="text-sm font-semibold">Easy Returns</p>
+                    <p class="text-xs text-white/20">14 days return policy</p>
+                </div>
+                <div>
+                    <div class="text-4xl gold-text mb-2"><i class="fas fa-headset"></i></div>
+                    <p class="text-sm font-semibold">24/7 Support</p>
+                    <p class="text-xs text-white/20">Dedicated concierge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CUSTOMER TESTIMONIALS
+    ============================================================ -->
+    <section class="py-20">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <p class="section-subtitle">Testimonials</p>
+                <h2 class="section-title">What Our <span class="gold">Clients Say</span></h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-8">
+                    <div class="flex text-gold mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-sm text-white/60 leading-relaxed">"HKN STORE is the epitome of luxury fashion. The quality, the service, the attention to detail – absolutely unparalleled."</p>
+                    <div class="mt-4 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">AK</div>
+                        <div><p class="text-sm font-semibold">Ahmed Khan</p><p class="text-xs text-white/20">Lahore, Pakistan</p></div>
+                    </div>
+                </div>
+                <div class="glass-card p-8">
+                    <div class="flex text-gold mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-sm text-white/60 leading-relaxed">"I've never experienced shopping like this before. The collection is stunning and the packaging is pure luxury. Highly recommended."</p>
+                    <div class="mt-4 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">ST</div>
+                        <div><p class="text-sm font-semibold">Sana Tariq</p><p class="text-xs text-white/20">Karachi, Pakistan</p></div>
+                    </div>
+                </div>
+                <div class="glass-card p-8">
+                    <div class="flex text-gold mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    <p class="text-sm text-white/60 leading-relaxed">"A truly premium experience. The website is beautiful, the products are exceptional, and the customer service is world-class."</p>
+                    <div class="mt-4 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">UA</div>
+                        <div><p class="text-sm font-semibold">Usman Ali</p><p class="text-xs text-white/20">Islamabad, Pakistan</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    INSTAGRAM GALLERY
+    ============================================================ -->
+    <section class="py-12">
+        <div class="container-custom">
+            <div class="text-center mb-10">
+                <p class="section-subtitle">Follow Us</p>
+                <h2 class="section-title">Instagram <span class="gold">Gallery</span></h2>
+                <p class="text-white/20 text-sm mt-2">@hknstore_official</p>
+            </div>
+            <div class="ig-grid">
+                <div class="item"><img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=300&h=300&fit=crop" alt="IG" /><div class="overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="item"><img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=300&h=300&fit=crop" alt="IG" /><div class="overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="item"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=300&h=300&fit=crop" alt="IG" /><div class="overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="item"><img src="https://images.unsplash.com/photo-1583744946564-b52d01e7f922?w=300&h=300&fit=crop" alt="IG" /><div class="overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="item"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop" alt="IG" /><div class="overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="item"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop" alt="IG" /><div class="overlay"><i class="fab fa-instagram"></i></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    NEWSLETTER
+    ============================================================ -->
+    <section class="py-16">
+        <div class="container-custom">
+            <div class="glass-card p-10 md:p-16 text-center border-gold/10">
+                <p class="section-subtitle">Exclusive</p>
+                <h2 class="section-title text-2xl md:text-3xl">Join the <span class="gold">Inner Circle</span></h2>
+                <p class="text-white/30 text-sm max-w-md mx-auto mt-2">Subscribe for exclusive access to new collections, private sales, and luxury events.</p>
+                <div class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mt-6">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-full bg-black/40 border border-gold/10 text-white placeholder-white/20 focus:outline-none focus:border-gold/40 transition" />
+                    <button class="btn-gold text-sm py-3 px-8 justify-center">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER – LUXURY
+    ============================================================ -->
+    <footer class="footer-luxury">
+        <div class="container-custom">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="brand">HKN <span>STORE</span></div>
+                    <p class="brand-desc">Luxury fashion for the discerning individual. Curated collections from the world's finest designers.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="links">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Kids</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <span>© 2026 HKN STORE. All rights reserved. Made with <i class="fas fa-heart text-red-500"></i> in Pakistan.</span>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                    <span class="payment-badge">Cash on Delivery</span>
+                    <span class="payment-badge">JazzCash</span>
+                    <span class="payment-badge">Easypaisa</span>
+                    <span class="payment-badge">Bank Transfer</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    SCRIPTS – FULL FUNCTIONALITY
+    ============================================================ -->
+    <script>
+        // ============================================================
+        // LOADING SCREEN
+        // ============================================================
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 800);
+        });
+
+        // ============================================================
+        // MOBILE MENU
+        // ============================================================
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileClose = document.getElementById('mobileClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        function openMobile() { mobileMenu.classList.add('open');
+            document.body.style.overflow = 'hidden'; }
+
+        function closeMobile() { mobileMenu.classList.remove('open');
+            document.body.style.overflow = ''; }
+
+        mobileToggle.addEventListener('click', openMobile);
+        mobileClose.addEventListener('click', closeMobile);
+        mobileMenu.addEventListener('click', (e) => { if (e.target === mobileMenu) closeMobile(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobile(); });
+
+        // ============================================================
+        // SEARCH TOGGLE
+        // ============================================================
+        const searchToggle = document.getElementById('searchToggle');
+        const searchBar = document.getElementById('searchBar');
+        let searchOpen = false;
+        searchToggle.addEventListener('click', () => {
+            searchOpen = !searchOpen;
+            searchBar.style.display = searchOpen ? 'block' : 'none';
+            if (searchOpen) searchBar.querySelector('input').focus();
+        });
+
+        // ============================================================
+        // CART SIDEBAR
+        // ============================================================
+        const cartToggle = document.getElementById('cartToggle');
+        const cartClose = document.getElementById('cartClose');
+        const cartSidebar = document.getElementById('cartSidebar');
+        const cartOverlay = document.getElementById('cartOverlay');
+
+        function openCart() { cartSidebar.classList.add('open');
+            cartOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden'; }
+
+        function closeCart() { cartSidebar.classList.remove('open');
+            cartOverlay.classList.remove('open');
+            document.body.style.overflow = ''; }
+
+        cartToggle.addEventListener('click', openCart);
+        cartClose.addEventListener('click', closeCart);
+        cartOverlay.addEventListener('click', closeCart);
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCart(); });
+
+        // ============================================================
+        // ADMIN PANEL
+        // ============================================================
+        const adminToggle = document.getElementById('adminToggle');
+        const adminPanel = document.getElementById('adminPanel');
+        const adminOverlayEl = document.getElementById('adminOverlay');
+        const adminClose = document.getElementById('adminClose');
+
+        function openAdmin() { adminPanel.classList.add('open');
+            adminOverlayEl.classList.add('open');
+            document.body.style.overflow = 'hidden'; }
+
+        function closeAdmin() { adminPanel.classList.remove('open');
+            adminOverlayEl.classList.remove('open');
+            document.body.style.overflow = ''; }
+
+        adminToggle.addEventListener('click', openAdmin);
+        adminClose.addEventListener('click', closeAdmin);
+        adminOverlayEl.addEventListener('click', closeAdmin);
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAdmin(); });
+
+        // Admin Tabs
+        document.querySelectorAll('.admin-sidebar .nav-item[data-tab]').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.admin-sidebar .nav-item').forEach(n => n.classList.remove('active'));
+                this.classList.add('active');
+                const tab = this.dataset.tab;
+                document.querySelectorAll('.admin-content > div[id^="tab-"]').forEach(el => el.style.display = 'none');
+                const target = document.getElementById('tab-' + tab);
+                if (target) target.style.display = 'block';
+            });
+        });
+
+        // ============================================================
+        // LIVE CHAT
+        // ============================================================
+        const chatToggleBtn = document.getElementById('chatToggle');
+        const chatWindow = document.getElementById('chatWindow');
+        const chatCloseBtn = document.getElementById('chatClose');
+        const chatInput = document.getElementById('chatInput');
+        const chatSendBtn = document.getElementById('chatSend');
+        const chatMessages = document.getElementById('chatMessages');
+
+        let chatOpenState = false;
+
+        function toggleChat() {
+            chatOpenState = !chatOpenState;
+            chatWindow.classList.toggle('open', chatOpenState);
+            if (chatOpenState) { chatInput.focus();
+                chatMessages.scrollTop = chatMessages.scrollHeight; }
+        }
+
+        chatToggleBtn.addEventListener('click', toggleChat);
+        chatCloseBtn.addEventListener('click', toggleChat);
+
+        function sendChatMessage() {
+            const text = chatInput.value.trim();
+            if (!text) return;
+            const div = document.createElement('div');
+            div.className = 'msg sent';
+            div.textContent = text;
+            chatMessages.appendChild(div);
+            chatInput.value = '';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            setTimeout(() => {
+                const replies = ['Thank you for your message! Our luxury concierge will assist you shortly. ✨',
+                    'We appreciate your interest in HKN STORE. How can we elevate your shopping experience?',
+                    'A wonderful choice! Would you like to know more about our premium collection?',
+                    'We\'re here to help! Feel free to ask about sizing, shipping, or our latest arrivals.'
+                ];
+                const reply = document.createElement('div');
+                reply.className = 'msg received';
+                reply.textContent = replies[Math.floor(Math.random() * replies.length)];
+                chatMessages.appendChild(reply);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1200 + Math.random() * 1800);
+        }
+
+        chatSendBtn.addEventListener('click', sendChatMessage);
+        chatInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendChatMessage(); });
+
+        // ============================================================
+        // TOAST SYSTEM
+        // ============================================================
+        const toastContainer = document.getElementById('toastContainer');
+
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `
+                        <span class="icon"><i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-gem'}"></i></span>
+                        <span>${message}</span>
+                        <button onclick="this.parentElement.remove()" style="background:none;border:none;color:rgba(255,255,255,0.2);cursor:pointer;"><i class="fas fa-times"></i></button>
+                    `;
+            toastContainer.appendChild(toast);
+            setTimeout(() => {
+                if (toast.parentElement) {
+                    toast.style.opacity = '0';
+                    toast.style.transform = 'translateX(100%)';
+                    setTimeout(() => toast.remove(), 300);
+                }
+            }, 4500);
+        }
+
+        // ============================================================
+        // CART FUNCTIONALITY
+        // ============================================================
+        let cartItems = [];
+
+        function updateCartUI() {
+            const countEl = document.getElementById('cartCount');
+            const itemsEl = document.getElementById('cartItems');
+            const totalEl = document.getElementById('cartTotal');
+
+            if (countEl) countEl.textContent = cartItems.length;
+
+            if (itemsEl) {
+                if (cartItems.length === 0) {
+                    itemsEl.innerHTML =
+                        '<div class="text-center py-12 text-white/20 text-sm">Your bag is empty</div>';
+                } else {
+                    itemsEl.innerHTML = cartItems.map((item, index) => `
+                                <div class="cart-item">
+                                    <img src="${item.image}" alt="${item.name}" />
+                                    <div class="details">
+                                        <div class="name">${item.name}</div>
+                                        <div class="price">PKR ${item.price.toLocaleString()}</div>
+                                        <div class="qty-control">
+                                            <button onclick="updateQty(${index}, -1)">−</button>
+                                            <span>${item.qty}</span>
+                                            <button onclick="updateQty(${index}, 1)">+</button>
+                                        </div>
+                                    </div>
+                                    <button class="remove-btn" onclick="removeFromCart(${index})"><i class="fas fa-times"></i></button>
+                                </div>
+                            `).join('');
+                }
+            }
+
+            const total = cartItems.reduce((sum, item) => sum + item.price * item.qty, 0);
+            if (totalEl) totalEl.textContent = `PKR ${total.toLocaleString()}`;
+        }
+
+        function updateQty(index, delta) {
+            if (cartItems[index]) {
+                cartItems[index].qty = Math.max(1, cartItems[index].qty + delta);
+                updateCartUI();
+            }
+        }
+
+        function removeFromCart(index) {
+            cartItems.splice(index, 1);
+            updateCartUI();
+            showToast('Item removed from bag', 'info');
+        }
+
+        // Add to cart buttons
+        document.querySelectorAll('.add-to-cart-btn, .add-to-cart-quick').forEach((btn) => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const card = this.closest('.product-card-luxury');
+                if (!card) return;
+                const name = card.querySelector('.name')?.textContent || 'Product';
+                const priceText = card.querySelector('.current')?.textContent || 'PKR 0';
+                const price = parseInt(priceText.replace(/[^0-9]/g, ''));
+                const img = card.querySelector('img')?.src || '';
+
+                const existing = cartItems.find(item => item.name === name);
+                if (existing) {
+                    existing.qty += 1;
+                } else {
+                    cartItems.push({ name, price, qty: 1, image: img });
+                }
+                updateCartUI();
+                showToast(`"${name}" added to your bag ✨`, 'success');
+
+                // Button feedback
+                const original = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-check"></i>';
+                this.style.background = 'var(--gold)';
+                this.style.color = 'var(--black)';
+                setTimeout(() => {
+                    this.innerHTML = original;
+                    this.style.background = '';
+                    this.style.color = '';
+                }, 1200);
+            });
+        });
+
+        // ============================================================
+        // WISHLIST
+        // ============================================================
+        document.querySelectorAll('.add-to-wishlist').forEach((btn) => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const icon = this.querySelector('i');
+                const isFilled = icon.classList.contains('fas');
+                if (isFilled) {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    this.style.color = '';
+                    showToast('Removed from wishlist', 'info');
+                } else {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    this.style.color = 'var(--gold)';
+                    const card = this.closest('.product-card-luxury');
+                    const name = card?.querySelector('.name')?.textContent || 'Product';
+                    showToast(`"${name}" added to wishlist ❤️`, 'success');
+                }
+            });
+        });
+
+        // ============================================================
+        // ADMIN FUNCTIONS
+        // ============================================================
+        function showAddProduct() {
+            const form = document.getElementById('addProductForm');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function addProduct() {
+            const name = document.getElementById('prodName').value.trim();
+            const price = document.getElementById('prodPrice').value;
+            const stock = document.getElementById('prodStock').value;
+            const category = document.getElementById('prodCategory').value;
+            const image = document.getElementById('prodImage').value.trim() ||
+                'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=400&h=533&fit=crop';
+
+            if (!name || !price) {
+                showToast('Please fill in product name and price', 'info');
+                return;
+            }
+
+            const tbody = document.getElementById('productTableBody');
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                        <td>${name}</td>
+                        <td>PKR ${parseInt(price).toLocaleString()}</td>
+                        <td>${stock || 0}</td>
+                        <td><button class="text-gold text-xs mr-2"><i class="fas fa-edit"></i></button><button class="text-red-500 text-xs"><i class="fas fa-trash"></i></button></td>
+                    `;
+            tbody.appendChild(tr);
+
+            document.getElementById('prodName').value = '';
+            document.getElementById('prodPrice').value = '';
+            document.getElementById('prodStock').value = '';
+            document.getElementById('prodImage').value = '';
+            document.getElementById('addProductForm').style.display = 'none';
+
+            showToast(`"${name}" added successfully! ✅`, 'success');
+        }
+
+        function addCategory() {
+            const input = document.getElementById('newCategory');
+            const name = input.value.trim();
+            if (!name) { showToast('Please enter a category name', 'info'); return; }
+            const list = document.querySelector('#tab-categories .flex-wrap');
+            if (list) {
+                const span = document.createElement('span');
+                span.className = 'px-4 py-1.5 rounded-full bg-white/5 text-xs';
+                span.textContent = name;
+                list.appendChild(span);
+            }
+            input.value = '';
+            showToast(`"${name}" category added! ✅`, 'success');
+        }
+
+        function addCoupon() {
+            const code = document.getElementById('couponCode').value.trim();
+            const percent = document.getElementById('couponPercent').value;
+            if (!code || !percent) { showToast('Please fill in both fields', 'info'); return; }
+            showToast(`Coupon "${code}" added with ${percent}% discount! ✅`, 'success');
+            document.getElementById('couponCode').value = '';
+            document.getElementById('couponPercent').value = '';
+        }
+
+        // ============================================================
+        // SEARCH INPUT
+        // ============================================================
+        document.querySelectorAll('input[type="text"]').forEach((input) => {
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const query = input.value.trim();
+                    if (query) {
+                        showToast(`Searching for "${query}"... 🔍`, 'info');
+                        if (searchBar.style.display === 'block') {
+                            searchBar.querySelector('input').value = '';
+                            searchBar.style.display = 'none';
+                            searchOpen = false;
+                        }
+                    }
+                }
+            });
+        });
+
+        // ============================================================
+        // CATEGORY NAV CLICKS
+        // ============================================================
+        document.querySelectorAll('.category-card-luxury, .nav-links a, .mobile-menu-luxury a').forEach((link) => {
+            if (link.getAttribute('href') === '#') {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (link.closest('.mobile-menu-luxury')) closeMobile();
+                    const text = link.textContent.trim() || 'Link';
+                    if (!link.closest('.logo') && !link.closest('.actions')) {
+                        showToast(`Exploring "${text}" collection ✨`, 'info');
+                    }
+                });
+            }
+        });
+
+        // ============================================================
+        // FLASH SALE TIMER
+        // ============================================================
+        let fh = 12,
+            fm = 34,
+            fs = 56;
+        setInterval(() => {
+            fs--;
+            if (fs < 0) { fs = 59;
+                fm--; }
+            if (fm < 0) { fm = 59;
+                fh--; }
+            if (fh < 0) { fh = 0;
+                fm = 0;
+                fs = 0; }
+            document.getElementById('flashH').textContent = String(fh).padStart(2, '0');
+            document.getElementById('flashM').textContent = String(fm).padStart(2, '0');
+            document.getElementById('flashS').textContent = String(fs).padStart(2, '0');
+        }, 1000);
+
+        // ============================================================
+        // WELCOME TOAST
+        // ============================================================
+        setTimeout(() => {
+            showToast('✨ Welcome to HKN STORE – Luxury Fashion Reimagined.', 'success');
+        }, 1200);
+
+        // ============================================================
+        // PRE-FILL CART WITH SAMPLE ITEMS
+        // ============================================================
+        cartItems = [
+            { name: 'Premium Silk Blazer', price: 12499, qty: 1,
+                image: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=400&h=533&fit=crop' },
+            { name: 'Luxury Silk Embroidered Suit', price: 9999, qty: 1,
+                image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=533&fit=crop' },
+        ];
+        updateCartUI();
+
+        console.log('✨ HKN STORE – Luxury Fashion Reimagined');
+        console.log('👑 Premium black, white & gold theme with glassmorphism');
+        console.log('🛍️ Full admin panel, live chat, cart, wishlist, and more.');
+        console.log('📦 Built with pure HTML, CSS, JS – ready for Next.js + Supabase.');
+    </script>
+</body>
+</html>
